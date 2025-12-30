@@ -1,97 +1,95 @@
-# Dashboard Complete - Quiz 2
+# Document Optimizer
 
-A comprehensive full-stack document management system with advanced analytics dashboard, built with React frontend and Node.js backend.
+A comprehensive full-stack document management system with advanced analytics dashboard, built with **Next.js (TypeScript)** frontend and **Node.js** backend.
 
 ## 🚀 Features
 
 ### 🔐 Authentication & User Management
-- ✅ User Registration with Client-side Validation
-- ✅ User Registration with Server-side Validation  
-- ✅ Data Storage in MongoDB Database
-- ✅ User Login Authentication
-- ✅ JWT Token-based Authentication with Auto-refresh
-- ✅ Password Encryption with bcrypt
-- ✅ Redirect to Login Page After Registration
-- ✅ LocalStorage for Token Management
-- ✅ Protected Routes with AuthContext
-- ✅ User Profile Management
-- ✅ Password Change Functionality
+- User Registration with Client-side & Server-side Validation
+- Data Storage in MongoDB Database
+- User Login Authentication
+- JWT Token-based Authentication with Auto-refresh
+- Password Encryption with bcrypt
+- Protected Routes with AuthContext
+- User Profile Management
+- Password Change Functionality
 
 ### 📊 Dashboard & Analytics
-- ✅ Real-time Dashboard with Live Statistics
-- ✅ Interactive Charts (Line, Area, Bar, Pie)
-- ✅ Document Upload Trends Analysis
-- ✅ File Type Distribution Analytics
-- ✅ User Activity Monitoring
-- ✅ Real-time Backend Health Monitoring
-- ✅ CountUp Animations for Statistics
-- ✅ Responsive Dashboard Layout
+- Real-time Dashboard with Live Statistics
+- Interactive Charts (Line, Area, Bar, Pie) using Recharts
+- Document Upload Trends Analysis
+- File Type Distribution Analytics
+- User Activity Monitoring
+- Real-time Backend Health Monitoring
+- CountUp Animations for Statistics
+- Responsive Dashboard Layout
 
 ### 📄 Document Management System
-- ✅ File Upload with Drag & Drop Interface
-- ✅ Multi-file Upload Support
-- ✅ Document CRUD Operations (Create, Read, Update, Delete)
-- ✅ Document Categories (Document, Image, Video, Audio, Other)
-- ✅ File Type Detection and Validation
-- ✅ Document Tagging System
-- ✅ File Size Formatting and Validation
-- ✅ Document Status Management
-- ✅ Bulk Document Operations
-- ✅ Document Search and Filtering
-- ✅ Document Details View
-- ✅ Upload Progress Tracking
-- ✅ File Queue Management
+- File Upload with Drag & Drop Interface
+- Multi-file Upload Support
+- Document CRUD Operations (Create, Read, Update, Delete)
+- Document Categories (Document, Image, Video, Audio, Other)
+- File Type Detection and Validation
+- Document Tagging System
+- File Size Formatting and Validation
+- Document Status Management
+- Bulk Document Operations
+- Document Search and Filtering
+- Document Details View
+- Upload Progress Tracking
+
+### 🤖 AI-Powered Services
+- **AI Text Humanizer**: Transform AI-generated content into natural, human-like text
+- **Prompt Optimizer**: Enhance AI prompts for better results
+- **Readability Analyzer**: Analyze and improve content readability scores
+- **Keyword Density Checker**: SEO optimization with keyword analysis
 
 ### 👥 Advanced User Management
-- ✅ Complete User CRUD Operations
-- ✅ User List with Pagination
-- ✅ User Search and Filtering
-- ✅ Bulk User Operations
-- ✅ User Status Management
-- ✅ User Profile Updates
-- ✅ Real-time User Statistics
+- Complete User CRUD Operations
+- User List with Pagination
+- User Search and Filtering
+- Bulk User Operations
+- User Status Management
+- User Profile Updates
+- Real-time User Statistics
 
 ### 🎨 UI/UX Features
-- ✅ Modern React Components with Framer Motion
-- ✅ Responsive Design with Tailwind CSS
-- ✅ Loading Spinners and Progress Indicators
-- ✅ Toast Notifications System
-- ✅ Sticky Upload Button
-- ✅ Animated Transitions
-- ✅ Professional Gradient Designs
-- ✅ Icon Integration (Lucide React)
-- ✅ Form Validation with Real-time Feedback
+- Modern Next.js App Router with TypeScript
+- Responsive Design with Tailwind CSS
+- Framer Motion Animations
+- Loading Spinners and Progress Indicators
+- Toast Notifications System (react-hot-toast)
+- Professional Gradient Designs
+- Icon Integration (Lucide React, React Icons)
+- Form Validation with Real-time Feedback
 
 ## 🛠️ Tech Stack
 
-**Frontend:**
-- React 18 with Hooks
-- React Router DOM v6
-- Tailwind CSS 3.0
-- Vite (Build Tool)
-- Framer Motion (Animations)
-- Recharts (Analytics Charts)
-- React CountUp (Statistics)
-- Lucide React (Icons)
-- Axios (HTTP Client)
+### Frontend
+- **Next.js 16** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS 4** for styling
+- **Framer Motion** for animations
+- **Recharts** for analytics charts
+- **React CountUp** for statistics
+- **Lucide React & React Icons** for icons
+- **Axios** for HTTP requests
+- **react-hot-toast** for notifications
+- **jwt-decode** for token handling
 
-**Backend:**
-- Node.js & Express.js
-- MongoDB with Mongoose ODM
-- Multer (File Upload Handling)
-- bcrypt (Password Hashing)
-- JWT (JSON Web Tokens)
-- express-validator (Input Validation)
-- CORS (Cross-Origin Resource Sharing)
-
-**Database Models:**
-- User Model (Authentication & Profile)
-- Document Model (File Management)
+### Backend
+- **Node.js** & **Express.js**
+- **MongoDB** with Mongoose ODM
+- **Multer** for file upload handling
+- **bcrypt** for password hashing
+- **JWT** for authentication
+- **express-validator** for input validation
+- **CORS** for cross-origin requests
 
 ## 📁 Project Structure
 
 ```
-dashboard-complete-quiz-2/
+document-optimizer-final/
 ├── BackEnd-Project/              # Node.js Backend
 │   ├── models/
 │   │   ├── User.js              # User MongoDB Model
@@ -101,267 +99,247 @@ dashboard-complete-quiz-2/
 │   │   ├── auth.js              # Authentication API
 │   │   ├── users.js             # User Management CRUD
 │   │   ├── documents.js         # Document Management CRUD
-│   │   ├── analytics.js         # Analytics & Statistics API
-│   │   ├── course.js            # Course Management
-│   │   ├── exercise.js          # Exercise Management
-│   │   └── result.js            # Results Management
+│   │   └── analytics.js         # Analytics & Statistics API
 │   ├── middleware/
 │   │   └── auth.js              # JWT Authentication Middleware
-│   ├── utils/
-│   │   └── healthMonitor.js     # Health Monitoring Utilities
 │   ├── uploads/                 # File Upload Directory
 │   ├── db.js                    # Database Connection
 │   ├── index.js                 # Main Server File
 │   └── package.json
-└── FrontEnd-React-Assignment-1/  # React Frontend
+│
+└── frontend/                     # Next.js TypeScript Frontend
     ├── src/
+    │   ├── app/                 # Next.js App Router Pages
+    │   │   ├── page.tsx         # Home Page
+    │   │   ├── layout.tsx       # Root Layout
+    │   │   ├── providers.tsx    # Context Providers
+    │   │   ├── globals.css      # Global Styles
+    │   │   ├── login/           # Login Page
+    │   │   ├── signup/          # Signup Page
+    │   │   ├── forgot-password/ # Password Recovery
+    │   │   ├── dashboard/       # Dashboard & Upload
+    │   │   ├── documents/[id]/  # Document Details (Dynamic)
+    │   │   ├── services/        # AI Services Pages
+    │   │   │   ├── humanizer/
+    │   │   │   ├── prompt-optimizer/
+    │   │   │   ├── readability/
+    │   │   │   └── keyword-checker/
+    │   │   ├── about/           # About Page
+    │   │   └── contact/         # Contact Page
     │   ├── components/          # Reusable Components
-    │   │   ├── DocumentManagement.jsx
-    │   │   ├── UserManagement.jsx
-    │   │   ├── HealthBadge.jsx
-    │   │   ├── Layout.jsx
-    │   │   ├── Navbar.jsx
-    │   │   ├── Footer.jsx
+    │   │   ├── Navbar.tsx
+    │   │   ├── Footer.tsx
+    │   │   ├── DocumentManagement.tsx
+    │   │   ├── UserManagement.tsx
+    │   │   ├── HealthBadge.tsx
     │   │   ├── auth/
-    │   │   │   └── ProtectedRoute.jsx
+    │   │   │   └── ProtectedRoute.tsx
     │   │   └── ui/
-    │   │       └── LoadingSpinner.jsx
-    │   ├── pages/               # Page Components
-    │   │   ├── Dashboard.jsx    # Main Dashboard with Analytics
-    │   │   ├── UploadPage.jsx   # Document Upload Interface
-    │   │   ├── DocumentDetails.jsx
-    │   │   ├── Login.jsx
-    │   │   ├── Signup.jsx
-    │   │   ├── Home.jsx
-    │   │   ├── About.jsx
-    │   │   ├── Contact.jsx
-    │   │   ├── Services.jsx
-    │   │   └── ForgotPassword.jsx
+    │   │       └── LoadingSpinner.tsx
     │   ├── contexts/
-    │   │   └── AuthContext.jsx  # Authentication Context
+    │   │   └── AuthContext.tsx  # Authentication Context
     │   ├── services/
-    │   │   ├── api.js           # Axios API Configuration
-    │   │   ├── backend.js       # Backend Service Functions
-    │   │   └── AI Services/     # AI-powered tools
-    │   │       ├── AiHumanizer.jsx
-    │   │       ├── KeywordChecker.jsx
-    │   │       ├── PromptOptimizer.jsx
-    │   │       └── ReadabilityAnalyzer.jsx
+    │   │   └── api.ts           # API Service with Types
     │   └── utils/               # Utility Functions
-    │       ├── charLength.js
-    │       ├── isAlphabetOnly.js
-    │       ├── regEmailTest.js
-    │       └── sanitizeInput.js
+    │       ├── charLength.ts
+    │       ├── isAlphabetOnly.ts
+    │       ├── regEmailTest.ts
+    │       └── sanitizeInput.ts
     ├── package.json
-    └── vite.config.js
+    ├── next.config.ts
+    ├── tailwind.config.ts
+    └── tsconfig.json
 ```
 
-## Installation & Setup
+## 🚀 Installation & Setup
+
+### Prerequisites
+- Node.js 18+ installed
+- MongoDB running locally or MongoDB Atlas connection
+- npm or yarn package manager
 
 ### Backend Setup
 ```bash
 cd BackEnd-Project
 npm install
+# Create .env file with your MongoDB URI and JWT secret
 node index.js
 ```
 
 ### Frontend Setup
 ```bash
-cd FrontEnd-React-Assignment-1
+cd frontend
 npm install
 npm run dev
 ```
 
-## Environment Variables
+The frontend will be available at `http://localhost:3000`
 
-**Important:** For security reasons, environment variables are stored in `env.txt` file instead of `.env` file when pushing to GitHub.
+## 🔧 Environment Variables
 
-To use environment variables:
-1. Rename `env.txt` to `.env` in your local development
-2. Update the values with your actual credentials
-3. The `.env` file is ignored by git for security
-
-Example env.txt (rename to .env for local use):
-```
-MONGO_URI=mongodb://localhost:27017/myDBTest
+### Backend (.env)
+```env
+MONGO_URI=mongodb://localhost:27017/documentOptimizer
 JWT_SECRET=your-secret-key-here
 PORT=5000
 ```
 
-**Note:** The `env.txt` file contains example values only. Replace with your actual database URI and JWT secret for production use.
+### Frontend (.env.local)
+```env
+NEXT_PUBLIC_BACKEND_URL=http://localhost:5000
+```
 
 ## 🔗 API Endpoints
 
 ### Authentication
-- `POST /api/register` - User registration
-- `POST /api/login` - User login
-- `POST /api/logout` - User logout
-- `POST /api/refresh` - Refresh JWT token
-- `GET /api/profile` - Get user profile
-- `PUT /api/profile` - Update user profile
-- `PUT /api/change-password` - Change password
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/register` | User registration |
+| POST | `/api/login` | User login |
+| POST | `/api/logout` | User logout |
+| POST | `/api/refresh` | Refresh JWT token |
+| GET | `/api/profile` | Get user profile |
+| PUT | `/api/profile` | Update user profile |
+| PUT | `/api/change-password` | Change password |
 
-### User Management (CRUD)
-- `GET /api/users` - Get all users with pagination
-- `GET /api/users/:id` - Get specific user
-- `PUT /api/users/:id` - Update user
-- `DELETE /api/users/:id` - Delete user
-- `DELETE /api/bulk/:criteria` - Bulk delete users
-- `PUT /api/bulk/:criteria` - Bulk update users
+### User Management
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/users` | Get all users (paginated) |
+| GET | `/api/users/:id` | Get specific user |
+| PUT | `/api/users/:id` | Update user |
+| DELETE | `/api/users/:id` | Delete user |
 
-### Document Management (CRUD)
-- `POST /api/documents/upload` - Upload document(s)
-- `GET /api/documents` - Get all documents with filtering
-- `GET /api/documents/:id` - Get specific document
-- `PUT /api/documents/:id` - Update document metadata
-- `DELETE /api/documents/:id` - Delete document
-- `PATCH /api/documents/:id/status` - Update document status
-- `DELETE /api/documents/bulk/:criteria` - Bulk delete documents
+### Document Management
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/documents/upload` | Upload document(s) |
+| GET | `/api/documents` | Get all documents |
+| GET | `/api/documents/:id` | Get specific document |
+| PUT | `/api/documents/:id` | Update document |
+| DELETE | `/api/documents/:id` | Delete document |
 
-### Analytics & Statistics
-- `GET /api/documents/analytics/stats` - Document statistics
-- `GET /api/documents/analytics/trends` - Upload trends
-- `GET /api/analytics/dashboard` - Dashboard statistics
-- `GET /api/analytics/usage` - Usage statistics
+### Analytics
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/documents/analytics/stats` | Document statistics |
+| GET | `/api/documents/analytics/trends` | Upload trends |
 
-### Health Monitoring
-- `GET /health` - Basic server health check
-- `GET /health/detailed` - Detailed health information
+### Health Check
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/health` | Basic health check |
+| GET | `/health/detailed` | Detailed health info |
 
-## Validation Features
+## 📱 Pages & Routes
 
-### Client-side Validation
-- First/Last name: Letters only, 2-35 characters
-- Email: Valid email format
-- Password: Minimum 6 characters
-- Confirm password matching
-- Terms agreement required
-
-### Server-side Validation
-- Express-validator for input validation
-- Duplicate email prevention
-- Password encryption with bcrypt
-- Structured error responses
-
-## 🚦 Usage Guide
-
-### Getting Started
-1. Start MongoDB service
-2. Run backend server: `cd BackEnd-Project && node index.js`
-3. Run frontend: `cd FrontEnd-React-Assignment-1 && npm run dev`
-4. Access application at `http://localhost:3001`
-
-### Application Features
-1. **Registration**: Create account at `/signup` with validation
-2. **Login**: Access dashboard at `/login` 
-3. **Dashboard**: View analytics and manage data at `/dashboard`
-4. **Document Upload**: Upload files with drag & drop interface
-5. **User Management**: CRUD operations for user accounts
-6. **Document Management**: Full document lifecycle management
-7. **Analytics**: Real-time statistics and trend analysis
-
-### File Upload Guidelines
-- **Maximum file size**: 50MB per file
-- **Supported formats**: PDF, DOC, DOCX, images, videos, archives
-- **Multiple files**: Simultaneous upload supported
-- **Categories**: Auto-detection or manual selection
-- **Tagging**: Add tags for better organization
+| Route | Description | Auth Required |
+|-------|-------------|---------------|
+| `/` | Home page with features overview | No |
+| `/login` | User login | No |
+| `/signup` | User registration | No |
+| `/forgot-password` | Password recovery | No |
+| `/dashboard` | Main dashboard with analytics | Yes |
+| `/dashboard/upload` | Document upload page | Yes |
+| `/documents/[id]` | Document details | Yes |
+| `/services` | AI services overview | No |
+| `/services/humanizer` | AI Text Humanizer | No |
+| `/services/prompt-optimizer` | Prompt Optimizer | No |
+| `/services/readability` | Readability Analyzer | No |
+| `/services/keyword-checker` | Keyword Density Checker | No |
+| `/about` | About page | No |
+| `/contact` | Contact page | No |
 
 ## 💾 Database Schema
 
 ### User Model
-```javascript
+```typescript
 {
-  firstName: String (required, 2-35 chars, letters only),
-  lastName: String (required, 2-35 chars, letters only),
-  email: String (required, unique, validated),
-  password: String (required, bcrypt hashed),
-  country: String (required),
-  agreeToTerms: Boolean (required),
-  role: String (default: 'user'),
-  status: String (default: 'active'),
-  timestamps: Date (createdAt, updatedAt)
+  firstName: string;      // 2-35 chars, letters only
+  lastName: string;       // 2-35 chars, letters only
+  email: string;          // unique, validated
+  password: string;       // bcrypt hashed
+  country: string;
+  agreeToTerms: boolean;
+  role: 'user' | 'admin';
+  status: 'active' | 'inactive';
+  createdAt: Date;
+  updatedAt: Date;
 }
 ```
 
 ### Document Model
-```javascript
+```typescript
 {
-  title: String (required, max 200 chars),
-  description: String (max 1000 chars),
-  filename: String (required, system generated),
-  originalName: String (required, user uploaded name),
-  mimeType: String (required),
-  size: Number (required, in bytes),
-  path: String (required, file system path),
-  uploadedBy: ObjectId (ref: User, required),
-  category: String (enum: document, image, video, audio, other),
-  tags: Array of Strings,
-  status: String (enum: active, archived, deleted),
-  isPublic: Boolean (default: false),
-  downloadCount: Number (default: 0),
-  timestamps: Date (createdAt, updatedAt)
+  title: string;          // max 200 chars
+  description?: string;   // max 1000 chars
+  filename: string;       // system generated
+  originalName: string;   // user uploaded name
+  mimeType: string;
+  size: number;           // in bytes
+  path: string;           // file system path
+  uploadedBy: ObjectId;   // ref: User
+  category: 'document' | 'image' | 'video' | 'audio' | 'other';
+  tags: string[];
+  status: 'active' | 'archived' | 'deleted';
+  isPublic: boolean;
+  downloadCount: number;
+  createdAt: Date;
+  updatedAt: Date;
 }
 ```
 
-## 🔄 Application Flow
+## 🔒 Security Features
 
-### Authentication Flow
-1. User registers → Validation → Data saved to DB → Redirect to login
-2. User logs in → JWT token generated → Stored in localStorage
-3. Protected routes use token for authentication
-4. Auto token refresh on expiration
-5. Automatic logout on token failure
+- JWT-based authentication with auto-refresh
+- Password hashing with bcrypt
+- Protected routes on frontend and backend
+- Input validation (client & server-side)
+- File type validation for uploads
+- CORS configuration
+- Secure token storage
 
-### Document Management Flow
-1. User uploads files → Validation → Multer processing → Database storage
-2. Files stored in `/uploads` directory with metadata in MongoDB
-3. Real-time upload progress tracking
-4. Drag & drop interface with file queue management
-5. Document CRUD operations with permissions
-
-### Dashboard Analytics Flow
-1. Real-time data fetching from MongoDB
-2. Statistical calculations and trend analysis
-3. Interactive charts rendering with Recharts
-4. Live updates and animations
-
-## 🎯 Key Features Implemented
+## 🎯 Key Features
 
 ### Complete CRUD Operations
-- ✅ **Users**: Create, Read, Update, Delete with bulk operations
-- ✅ **Documents**: Full lifecycle management with file uploads
-- ✅ **Analytics**: Real-time statistics and trend analysis
-- ✅ **Authentication**: Secure JWT-based system with auto-refresh
+- **Users**: Create, Read, Update, Delete with bulk operations
+- **Documents**: Full lifecycle management with file uploads
+- **Analytics**: Real-time statistics and trend analysis
 
 ### Advanced UI Components
-- ✅ **Interactive Dashboard**: Charts, statistics, and live data
-- ✅ **File Upload Interface**: Drag & drop with progress tracking
-- ✅ **Responsive Design**: Mobile-first approach with Tailwind CSS
-- ✅ **Animations**: Smooth transitions with Framer Motion
+- **Interactive Dashboard**: Charts, statistics, and live data
+- **File Upload Interface**: Drag & drop with progress tracking
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Animations**: Smooth transitions with Framer Motion
 
-### Performance & Security
-- ✅ **Optimized API calls**: Axios interceptors and error handling
-- ✅ **Input validation**: Client and server-side validation
-- ✅ **File security**: Proper file type validation and storage
-- ✅ **Authentication**: Protected routes and token management
+## 📝 Scripts
 
-## 🏆 Project Status
+### Frontend
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
 
-This is a **complete full-stack application** with:
-- ✅ Frontend: Modern React with advanced UI components
-- ✅ Backend: RESTful API with comprehensive CRUD operations  
-- ✅ Database: MongoDB with proper schema design
-- ✅ Authentication: Secure JWT implementation
-- ✅ File Management: Complete upload/download system
-- ✅ Analytics: Real-time dashboard with charts
-- ✅ Responsive Design: Mobile and desktop optimized
+### Backend
+```bash
+npm start        # Start server
+npm run dev      # Start with nodemon (if configured)
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-**Created for AWD Course - 5th Semester Project**
-- Complete Document Management System
-- Advanced Analytics Dashboard  
-- Modern React.js Implementation
-- RESTful API Design
-- MongoDB Database Integration
+Document Optimizer - A modern document management system with AI-powered tools.
