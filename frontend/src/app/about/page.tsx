@@ -6,8 +6,8 @@ import { Users, Target, Award, Heart } from 'lucide-react';
 const team = [
   { name: 'Samreen', role: 'CEO & Founder', image: 'A' },
   { name: 'Maida', role: 'CTO', image: 'S' },
-  { name: 'Ajwa Shahid', role: 'Lead Developer', image: 'M' },
-  { name: 'Ai', role: 'Product Manager', image: 'E' },
+  { name: 'Ajwa Shahid', role: 'Developer', image: 'M' },
+  { name: 'Phuspa', role: 'Chicken roll', image: 'E' },
 ];
 
 const values = [
