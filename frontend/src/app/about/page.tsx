@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import { Users, Target, Award, Heart } from 'lucide-react';
 
 const team = [
-  { name: 'Alex Johnson', role: 'CEO & Founder', image: 'A' },
-  { name: 'Sarah Williams', role: 'CTO', image: 'S' },
-  { name: 'Michael Chen', role: 'Lead Developer', image: 'M' },
-  { name: 'Emily Davis', role: 'Product Manager', image: 'E' },
+  { name: 'Samreen', role: 'CEO & Founder', image: 'A' },
+  { name: 'Maida', role: 'CTO', image: 'S' },
+  { name: 'Ajwa Shahid', role: 'Lead Developer', image: 'M' },
+  { name: 'Ai', role: 'Product Manager', image: 'E' },
 ];
 
 const values = [

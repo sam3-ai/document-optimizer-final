@@ -19,7 +19,6 @@ import {
   Cell,
 } from 'recharts';
 import { FileText, Users, Upload, TrendingUp, Plus } from 'lucide-react';
-import ProtectedRoute from '@/components/auth/ProtectedRoute';
 import DocumentManagement from '@/components/DocumentManagement';
 import UserManagement from '@/components/UserManagement';
 import { getDocumentStats, getDocumentTrends, getAllUsers, DocumentStats, DocumentTrends } from '@/services/api';
@@ -260,9 +259,5 @@ function DashboardPage() {
 }
 
 export default function Dashboard() {
-  return (
-    <ProtectedRoute>
-      <DashboardPage />
-    </ProtectedRoute>
-  );
+  return <DashboardPage />;
 }

@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const navigation = [
     { name: 'Home', href: '/', shortName: 'Home' },
-    ...(isAuthenticated ? [{ name: 'Dashboard', href: '/dashboard', shortName: 'Dashboard' }] : []),
+    { name: 'Dashboard', href: '/dashboard', shortName: 'Dashboard' },
     { name: 'Services', href: '/services', shortName: 'Services' },
     { name: 'About', href: '/about', shortName: 'About' },
     { name: 'Contact', href: '/contact', shortName: 'Contact' },
@@ -51,8 +51,14 @@ const Navbar = () => {
                   />
                 </svg>
               </div>
-              <span className="ml-3 text-xl font-bold text-gray-900 hidden sm:block">Document Optimizer</span>
-              <span className="ml-3 text-lg font-bold text-gray-900 sm:hidden">Document Optimizer</span>
+              <span className="ml-3 text-xl font-bold hidden sm:block">
+                <span className="text-gray-900">Document</span>
+                <span className="text-blue-400">Optimizer</span>
+              </span>
+              <span className="ml-3 text-lg font-bold sm:hidden">
+                <span className="text-gray-900">Document</span>
+                <span className="text-blue-400">Optimizer</span>
+              </span>
             </Link>
           </div>
 

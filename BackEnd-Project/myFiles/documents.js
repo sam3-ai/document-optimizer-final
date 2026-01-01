@@ -475,7 +475,7 @@ router.get('/documents/:id/download', async (req, res) => {
 });
 
 // ANALYTICS - Get document statistics
-router.get('/documents/analytics/stats', authenticateToken, async (req, res) => {
+router.get('/documents/analytics/stats', async (req, res) => {
   try {
     const totalDocuments = await Document.countDocuments({ status: { $ne: 'deleted' } });
     const activeDocuments = await Document.countDocuments({ status: 'active' });
@@ -520,7 +520,7 @@ router.get('/documents/analytics/stats', authenticateToken, async (req, res) => 
 });
 
 // ANALYTICS - Monthly upload trends and storage per month
-router.get('/documents/analytics/trends', authenticateToken, async (req, res) => {
+router.get('/documents/analytics/trends', async (req, res) => {
   try {
     const { months = 6 } = req.query;
     const monthsInt = Math.min(Math.max(parseInt(months) || 6, 1), 24);

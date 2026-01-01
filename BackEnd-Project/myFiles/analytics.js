@@ -3,8 +3,8 @@ const router = express.Router();
 const User = require('../models/User');
 const { authenticateToken } = require('../middleware/auth');
 
-// Dashboard statistics endpoint
-router.get('/analytics/dashboard', authenticateToken, async (req, res) => {
+// Dashboard statistics endpoint (public)
+router.get('/analytics/dashboard', async (req, res) => {
   try {
     // Get user statistics
     const totalUsers = await User.countDocuments();
@@ -59,9 +59,9 @@ router.get('/analytics/dashboard', authenticateToken, async (req, res) => {
       recentActivity: [
         {
           id: 1,
-          type: 'user_registered',
-          message: 'New user registered',
-          user: req.user.firstName,
+          type: 'system_event',
+          message: 'System generated activity sample',
+          user: 'System',
           timestamp: new Date().toISOString()
         },
         {
@@ -89,8 +89,8 @@ router.get('/analytics/dashboard', authenticateToken, async (req, res) => {
   }
 });
 
-// Usage statistics endpoint
-router.get('/analytics/usage', authenticateToken, async (req, res) => {
+// Usage statistics endpoint (public)
+router.get('/analytics/usage', async (req, res) => {
   try {
     const { period = '7d' } = req.query;
     
@@ -130,8 +130,8 @@ router.get('/analytics/usage', authenticateToken, async (req, res) => {
   }
 });
 
-// Performance metrics endpoint
-router.get('/analytics/performance', authenticateToken, async (req, res) => {
+// Performance metrics endpoint (public)
+router.get('/analytics/performance', async (req, res) => {
   try {
     // Mock performance data
     const performanceData = {
